@@ -1,5 +1,6 @@
 package com.ead.course.dtos;
 
+
 import com.ead.course.enums.CourseLevel;
 import com.ead.course.enums.CourseStatus;
 import lombok.Data;
@@ -15,11 +16,11 @@ public class CourseDto {
     private String name;
     @NotBlank
     private String description;
+    private String imageUrl;
     @NotNull
     private CourseStatus courseStatus;
     @NotNull
     private UUID userInstructor;
     @NotNull
     private CourseLevel courseLevel;
-
 }

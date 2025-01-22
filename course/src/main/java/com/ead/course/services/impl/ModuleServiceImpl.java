@@ -29,7 +29,7 @@ public class ModuleServiceImpl implements ModuleService {
     @Override
     public void delete(ModuleModel moduleModel) {
         List<LessonModel> lessonModelList = lessonRepository.findAllLessonsIntoModule(moduleModel.getModuleId());
-        if(!lessonModelList.isEmpty()){
+        if (!lessonModelList.isEmpty()){
             lessonRepository.deleteAll(lessonModelList);
         }
         moduleRepository.delete(moduleModel);
@@ -42,12 +42,12 @@ public class ModuleServiceImpl implements ModuleService {
 
     @Override
     public Optional<ModuleModel> findModuleIntoCourse(UUID courseId, UUID moduleId) {
-        return moduleRepository.findModuleIntoCourse(courseId,moduleId);
+        return moduleRepository.findModuleIntoCourse(courseId, moduleId);
     }
 
     @Override
     public List<ModuleModel> findAllByCourse(UUID courseId) {
-        return moduleRepository.findAllModulesIntoCourse(courseId);
+        return moduleRepository.findAllLModulesIntoCourse(courseId);
     }
 
     @Override
