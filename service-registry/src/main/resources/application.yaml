@@ -5,6 +5,7 @@ spring:
   application:
     name: ead-service-registry
 
+
 eureka:
   client:
     register-with-eureka: false
