@@ -1,4 +1,4 @@
-package com.ead.authuser.dtos;
+package com.ead.authuser.controllers;
 
 import com.ead.authuser.clients.CourseClient;
 import com.ead.authuser.models.UserModel;
